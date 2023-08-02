@@ -7,6 +7,7 @@ public class Array1 {
         int a=1;
         int temp=0;
         int ignore=-1;
+        int l=0;
         for(int i=0;i<n;i++) {
             int b = sc.nextInt();
             arr[i]=b;
@@ -16,11 +17,15 @@ public class Array1 {
             else if(b==0){
                 temp=1;
                 ignore=i;
+                l++;
             }
         }
         //System.out.println(a);
         for(int i=0;i<n;i++){
-            if(i!=ignore && temp==0) {
+            if(l>1){
+                System.out.print(0+" ");
+            }
+            else if(i!=ignore && temp==0) {
                 a = a / arr[i];
                 System.out.print(a + " ");
                 a = a * arr[i];
