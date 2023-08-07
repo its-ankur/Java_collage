@@ -21,6 +21,6 @@ public class TwoDArray {
                 System.out.print(y + " ");
             }
         }
-            }
     }
+}
 
