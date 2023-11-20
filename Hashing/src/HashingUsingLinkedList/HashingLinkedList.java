@@ -1,7 +1,7 @@
 package HashingUsingLinkedList;
 
 import java.util.LinkedList;
-
+//some changes
 class HashTable {
     private static final int TABLE_SIZE = 10;
     private LinkedList<Node>[] table;
