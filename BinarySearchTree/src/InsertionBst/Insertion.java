@@ -1,11 +1,12 @@
 package InsertionBst;
 import java.util.*;
-class Insertion {
-    static class Node {
-        int key;
-        Node left, right;
+public class Insertion {
+    public static class Node {
+        public int key;
+        public Node left;
+        public Node right;
     }
-    static Node newNode(int data)
+    public static Node newNode(int data)
     {
         Node temp = new Node();
         temp.key = data;
@@ -13,7 +14,7 @@ class Insertion {
         temp.right = null;
         return temp;
     }
-    static Node insert(Node root, int key)
+    public static Node insert(Node root, int key)
     {
         Node newnode = newNode(key);
         Node x = root;
@@ -33,7 +34,7 @@ class Insertion {
             y.right = newnode;
         return y;
     }
-    static void Inorder(Node root)
+    public static void Inorder(Node root)
     {
         if (root == null)
             return;
@@ -46,13 +47,12 @@ class Insertion {
     public static void main(String[] args)
     {
         Node root = null;
-        root = insert(root, 50);
-        insert(root, 30);
-        insert(root, 20);
-        insert(root, 40);
-        insert(root, 70);
-        insert(root, 60);
-        insert(root, 80);
+        root = insert(root, 30);
+        insert(root, 18);
+        insert(root, 45);
+        insert(root, 10);
+        insert(root, 42);
+        insert(root, 67);
         Inorder(root);
     }
 }
